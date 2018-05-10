@@ -1,5 +1,7 @@
 <?php
 
+include 'connectDB.php';
+
 /**
  * Funcion que sirva para validar y limpiar un campo
  *
@@ -22,4 +24,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = validar_campo($_POST["password"]);
     
 }
+
+
    
