@@ -24,8 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     $username = validar_campo($_POST["username"]);
     $password = validar_campo($_POST["password"]);
-    var_dump($_POST);
-    
+        
     if ($resultado->num_rows > 0) {
         $filas = $resultado->fetch_assoc();
         
