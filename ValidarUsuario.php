@@ -22,8 +22,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = validar_campo($_POST["username"]);
     $password = validar_campo($_POST["password"]);
     
-    var_dump($username);
-    var_dump($password);
     
     if ($resultado->num_rows > 0) {
         while ($filas = $resultado->fetch_assoc()) {
@@ -33,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 
                 header('Location: index.php');
             } else {
-                //header('Location: login-registro.php');
+                header('Location: login-registro.php');
             }
         }
     }
