@@ -19,7 +19,6 @@ $sql = "SELECT * FROM users";
 $resultado = $conn->query($sql);
 
 
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     $username = validar_campo($_POST["username"]);
