@@ -29,9 +29,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $filas = $resultado->fetch_assoc();
         
         if ($filas['username'] == $username && $filas['password'] == $password) {
+            
             header('Location: index.php');
         } else {
-            header('Location: login.php');
+            header('Location: login-registro.php');
         }
     }
 }

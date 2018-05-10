@@ -1,3 +1,9 @@
+<?php
+
+
+
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -17,15 +23,13 @@
 </head>
 
 <body class="text-center">
-	<form action="ValidarUsuario.php" class="form-signin" method="POST">
+	<form action="registro.php" class="form-signin" method="POST">
 		<h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
 		<input type="text" name="username" class="form-control"
-			placeholder="UserName" required autofocus> <input
-			type="password" name="password" class="form-control"
-			placeholder="Password" required>
+			placeholder="UserName" required autofocus> <input type="password"
+			name="password" class="form-control" placeholder="Password" required>
 
-		<button class="btn btn-lg btn-primary btn-block" type="submit">Sign
-			in</button>
+		<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
 		<p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
 	</form>
 </body>
