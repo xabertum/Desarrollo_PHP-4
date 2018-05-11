@@ -15,7 +15,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = validar_campo($_POST["password"]);
 }
 
-var_dump($_POST);
 
 /* Conectando al servidor de MySQL */
 $conn = new mysqli($host, $user, $passwordDB, $dbname);
