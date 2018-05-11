@@ -25,9 +25,11 @@ if ($conn->connect_error) {
 
 $sql = "INSERT INTO users (username, password) VALUES ('$username', '$password')";
 
-if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
-} else {
+if ($conn->query($sql)) {
+        
+    header('Location: index.html');
+    
+   } else {
     echo 'failed '  . mysqli_error($conn) ;
 }
     

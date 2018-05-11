@@ -29,9 +29,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if ($filas['username'] == $username &&
                     $filas['password'] == $password) {
                 
-                header('Location: index.php');
+                header('Location: index.html');
             } else {
-                header('Location: login-registro.php');
+                header('Location: login-registro.html');
             }
         }
     }
