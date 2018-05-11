@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 ?>
 
 <!doctype html>
@@ -78,15 +80,15 @@
 				sweet, but not too short so folks don't simply skip over it
 				entirely.</p>
 			<p>
-				<a href="#" class="btn btn-primary my-2">Main call to action</a> <a
-					href="#" class="btn btn-secondary my-2">Secondary action</a>
+				<a href="compra.php" class="btn btn-primary my-2">Main call to
+					action</a> <a href="#" class="btn btn-secondary my-2">Secondary
+					action</a>
 			</p>
 		</div>
 	</section>
 
 	<div class="album py-5 bg-light">
 		<div class="container">
-
 			<div class="row">
 				<div class="col-md-4">
 					<div class="card mb-4 box-shadow">
@@ -98,14 +100,32 @@
 								below as a natural lead-in to additional content. This content
 								is a little bit longer.</p>
 							<div class="d-flex justify-content-between align-items-center">
-								<div class="btn-group">
-									<select name="precio">
-										<option>
+								<div>
+									<form action="compra.php" method="POST">
+										<label>Cantidad: </label> 
+										<select name="cantidad">
+											<option value="0">-</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>
+											<option value="5">5</option>
+										</select> 
+										<input class="btn btn-primary" type="submit" value="Submit" name="submit">
+									</form>
 									
+									<?php
+									if (!isset($_POST['submit'])) {
 									
-									</select>
+								        $_SESSION['cantidad_producto_1'] = $_POST['cantidad'];	    
+									
+									}
+                                                                                        
+            
+                                    ?>
+                                    
 								</div>
-								<small class="text-muted">9 mins</small>
+								<small class="text-muted">100 &euro;</small>
 							</div>
 						</div>
 					</div>
