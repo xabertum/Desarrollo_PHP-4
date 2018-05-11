@@ -41,3 +41,6 @@ footer p {
 	width: 80% !important;
 	margin: 0 auto !important;
 }
+.card-text {
+	text-align: justify !important;
+}
