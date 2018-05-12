@@ -3,6 +3,23 @@ include 'Producto.php';
 
 /*Variable que nos pasa la cantidad de producto*/
 $cantidades = $_POST['cantidad'];
+
+
+/* Array de productos */
+
+$productos = array(
+        "Producto1"=>"100",
+        "Producto2"=>"200",
+        "Producto3"=>"400",
+        "Producto4"=>"100",
+        "Producto5"=>"200",
+        "Producto6"=>"400",
+        "Producto7"=>"100",
+        "Producto8"=>"200",
+        "Producto9"=>"400",        
+)
+
+
 ?>
 
 <!DOCTYPE html>
@@ -40,8 +57,12 @@ $cantidades = $_POST['cantidad'];
                     
                     $producto = new Producto();
                     $producto->setCantidad($cantidad);
-                    $producto->setNombre("Producto_1");
                     
+                    foreach ($productos as $producto => $precio_producto) {
+                    
+                        $producto->setNombre($producto);
+                    
+                    }
                     echo '<tr>
 					<td>Row 1: Col 1</td>
 					<td>';
