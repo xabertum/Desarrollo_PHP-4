@@ -3,5 +3,5 @@ include 'compra.php';
 
 $producto = new Producto();
 
-echo "cantidad: " . $producto->getCantidad();
+echo "cantidad: " . $producto_1->getCantidad();
 

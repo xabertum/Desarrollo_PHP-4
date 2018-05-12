@@ -107,7 +107,7 @@ session_start();
 							<div class="d-flex justify-content-between align-items-center">
 								<div>
 									Cantidad:
-									<input type="number" name="cantidad" style="width: 25%" min="1" form="carrito_form">
+									<input type="number" name="cantidad[]" style="width: 25%" min="1" form="carrito_form">
 								</div>
 								<small class="text-muted">100 &euro;</small>
 							</div>
@@ -124,11 +124,11 @@ session_start();
 								below as a natural lead-in to additional content. This content
 								is a little bit longer.</p>
 							<div class="d-flex justify-content-between align-items-center">
-								<div class="btn-group">
-									<button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-									<button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+								<div>
+									Cantidad:
+									<input type="number" name="cantidad[]" style="width: 25%" min="1" form="carrito_form">
 								</div>
-								<small class="text-muted">9 mins</small>
+								<small class="text-muted">100 &euro;</small>
 							</div>
 						</div>
 					</div>
@@ -143,11 +143,11 @@ session_start();
 								below as a natural lead-in to additional content. This content
 								is a little bit longer.</p>
 							<div class="d-flex justify-content-between align-items-center">
-								<div class="btn-group">
-									<button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-									<button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+								<div>
+									Cantidad:
+									<input type="number" name="cantidad[]" style="width: 25%" min="1" form="carrito_form">
 								</div>
-								<small class="text-muted">9 mins</small>
+								<small class="text-muted">100 &euro;</small>
 							</div>
 						</div>
 					</div>

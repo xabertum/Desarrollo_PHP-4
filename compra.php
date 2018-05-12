@@ -1,14 +1,20 @@
 <?php
 include 'Producto.php';
 
+$cantidades = $_POST['cantidad'];
 
-if (isset($_POST['cantidad'])) {
+if (isset($cantidades)) {
     
-    $producto_1 = new Producto();
-    $producto_1->setCantidad($_POST['cantidad']);
-    $producto_1->setNombre("Producto_1");
-    
-    echo "cantidad:" . $producto_1->getCantidad();
-    
-    
+    foreach ($cantidades as $cantidad) {
+        
+        $producto = new Producto();
+        $producto->setCantidad($cantidad);
+        $producto->setNombre("Producto_1");
+        
+        echo "cantidad:" . $producto->getCantidad();
+    }
 }
+
+?>
+
+
