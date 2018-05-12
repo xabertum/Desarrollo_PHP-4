@@ -21,7 +21,7 @@ session_start();
 	crossorigin="anonymous">
 
 
-<!-- Custom styles for this template -->
+<!-- Custom styles -->
 <link href="css/index-custom.css" rel="stylesheet">
 </head>
 
@@ -80,9 +80,14 @@ session_start();
 				sweet, but not too short so folks don't simply skip over it
 				entirely.</p>
 			<p>
-				<a href="compra.php" class="btn btn-primary my-2">Main call to
-					action</a> <a href="#" class="btn btn-secondary my-2">Secondary
-					action</a>
+			
+			
+			<form action="compra.php" id="carrito_form" method="post">
+				<input class="btn btn-primary" type="submit" value="Comprar">
+			</form>
+
+			<a href="#" class="btn btn-primary my-2">Main call to action</a> <a
+				href="#" class="btn btn-secondary my-2">Secondary action</a>
 			</p>
 		</div>
 	</section>
@@ -101,13 +106,10 @@ session_start();
 								is a little bit longer.</p>
 							<div class="d-flex justify-content-between align-items-center">
 								<div>
-									<form action="compra.php" method="post">
-										<label>Cantidad: </label>
-										<input type = "number" name = "cantidad" width = "25">										
-										<input class="btn btn-primary" type="submit"
-											value="Submit" name="submit">
-									</form>
-									
+
+									<input type="number" name="cantidad" width="25" form="carrito_form">
+
+
 								</div>
 								<small class="text-muted">100 &euro;</small>
 							</div>

@@ -1,13 +1,14 @@
 <?php
-session_start();
-
-echo $_POST['cantidad'];
-
-//unset ($_SESSION['selected_val']);
+include 'Producto.php';
 
 
-if (!isset($_SESSION['cantidad_producto_1'])) {
+if (isset($_POST['cantidad'])) {
     
-    $_SESSION['cantidad_producto_1'] = $_POST['cantidad'];
+    $producto_1 = new Producto();
+    $producto_1->setCantidad($_POST['cantidad']);
+    $producto_1->setNombre("Producto_1");
+    
+    echo "cantidad:" . $producto_1->getCantidad();
+    
     
 }
