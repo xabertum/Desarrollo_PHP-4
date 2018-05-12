@@ -17,6 +17,7 @@ if ($conn->connect_error) {
 $sql = "SELECT * FROM users";
 $resultado = $conn->query($sql);
 
+/*Asignacion y validacion de usuario y password*/
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     $username = validar_campo($_POST["username"]);
