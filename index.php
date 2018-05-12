@@ -101,29 +101,13 @@ session_start();
 								is a little bit longer.</p>
 							<div class="d-flex justify-content-between align-items-center">
 								<div>
-									<form action="compra.php" method="POST">
-										<label>Cantidad: </label> 
-										<select name="cantidad">
-											<option value="0">-</option>
-											<option value="1">1</option>
-											<option value="2">2</option>
-											<option value="3">3</option>
-											<option value="4">4</option>
-											<option value="5">5</option>
-										</select> 
-										<input class="btn btn-primary" type="submit" value="Submit" name="submit">
+									<form action="compra.php" method="post">
+										<label>Cantidad: </label>
+										<input type = "number" name = "cantidad" width = "25">										
+										<input class="btn btn-primary" type="submit"
+											value="Submit" name="submit">
 									</form>
 									
-									<?php
-									if (!isset($_POST['submit'])) {
-									
-								        $_SESSION['cantidad_producto_1'] = $_POST['cantidad'];	    
-									
-									}
-                                                                                        
-            
-                                    ?>
-                                    
 								</div>
 								<small class="text-muted">100 &euro;</small>
 							</div>
