@@ -106,10 +106,8 @@ session_start();
 								is a little bit longer.</p>
 							<div class="d-flex justify-content-between align-items-center">
 								<div>
-
-									<input type="number" name="cantidad" width="25" form="carrito_form">
-
-
+									Cantidad:
+									<input type="number" name="cantidad" style="width: 25%" min="1" form="carrito_form">
 								</div>
 								<small class="text-muted">100 &euro;</small>
 							</div>
