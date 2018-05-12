@@ -1,10 +1,9 @@
 <?php
 include 'Producto.php';
 
+/*Variable que nos pasa la cantidad de producto*/
 $cantidades = $_POST['cantidad'];
 ?>
-
-
 
 <!DOCTYPE html>
 <html>
@@ -19,6 +18,8 @@ $cantidades = $_POST['cantidad'];
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
 	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
 	crossorigin="anonymous">
+	
+<link rel="stylesheet" href="css/compra.css">
 </head>
 
 <body>
@@ -30,7 +31,7 @@ $cantidades = $_POST['cantidad'];
 
             <?php
             if (isset($cantidades)) {
-                echo '<table border="1">';
+                echo '<table id="table" border="1">';
                 echo '<tr>
 					<th>Nombre Producto</th>
 					<th>Cantidad</th>
