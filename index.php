@@ -79,15 +79,14 @@ session_start();
 				collection below�its contents, the creator, etc. Make it short and
 				sweet, but not too short so folks don't simply skip over it
 				entirely.</p>
-			<p>
+			
 						
 			<form action="compra.php" id="carrito_form" method="post">
 				<input class="btn btn-primary" type="submit" value="Comprar">
 			</form>
-
-			<a href="#" class="btn btn-primary my-2">Main call to action</a> <a
-				href="#" class="btn btn-secondary my-2">Secondary action</a>
-			</p>
+			<form action="cesta.php" id="cesta-compra"></form>
+			
+			
 		</div>
 	</section>
 
@@ -106,8 +105,9 @@ session_start();
 							<div class="d-flex justify-content-between align-items-center">
 								<div>
 									Cantidad:
-									<input type="number" name="cantidad[]" style="width: 25%" min="1" form="carrito_form">
-									<input type="hidden" name="producto[]" value="Producto_1" form="carrito_form">
+									<input type="number" name="cantidad[]" style="width: 25%" min="1" form="cesta-compra">
+									<input type="hidden" name="producto[]" value="Producto_1" form="cesta-compra">
+									<input class="btn btn-primary" type="submit" value="Agregar">
 								</div>
 								<small class="text-muted">100 &euro;</small>
 							</div>

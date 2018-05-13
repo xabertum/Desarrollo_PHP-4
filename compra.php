@@ -1,9 +1,13 @@
 <?php
 include 'Producto.php';
+include 'assets/connection.php';
 
 /* Variables que nos pasan los detalles de cada producto */
 $cantidades = $_POST['cantidad'];
 $productos = $_POST['producto'];
+
+$sql = "SELECT * FROM productos";
+$resultado = $conn->query($sql);
 
 ?>
 
@@ -39,28 +43,34 @@ $productos = $_POST['producto'];
 
             <?php
             if (isset($cantidades)) {
-                
-                foreach ($cantidades as $cantidad) {
                     
-                    echo '<tr>';
-                    echo '<td>';
-                    
-                    echo $productos;
-                    
-                    echo '</td>';
-                    echo '<td>';
-                    
-                    echo $cantidad;
-                    
-                    echo '</td>';
-                    echo '<td>';
-                    
-                    echo "";
-                    
-                    echo '</td>';
-                    echo '</tr>';
+                    if ($resultado->num_rows > 0) {
+                        
+                        while ($filas = $resultado->fetch_assoc()) {
+                            
+                            if ($filas['precio'] > 100) {
+                                
+                                echo '<tr>';
+                                echo '<td>';
+                                
+                                echo $filas['nombre'];
+                                
+                                echo '</td>';
+                                echo '<td>';
+                                
+                                echo $filas['cantidad'];
+                                
+                                echo '</td>';
+                                echo '<td>';
+                                
+                                echo $filas['precio'];
+                                
+                                echo '</td>';
+                                echo '</tr>';
+                            }
+                        }
+                    }
                 }
-            }
             
             ?>
 				</table>
