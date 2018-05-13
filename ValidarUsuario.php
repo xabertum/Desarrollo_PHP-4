@@ -1,18 +1,7 @@
 <?php
 include 'helps.php';
+include 'assets/connection.php';
 
-/* Variables de servidor */
-$host = "localhost";
-$user = "root";
-$password = "";
-$dbname = "electro_tienda";
-
-/* Conectando al servidor local de MySQL */
-$conn = new mysqli($host, $user, $password, $dbname);
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
 
 $sql = "SELECT * FROM users";
 $resultado = $conn->query($sql);
@@ -30,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if ($filas['username'] == $username &&
                     $filas['password'] == $password) {
                 
-                header('Location: index.html');
+                header('Location: index.php');
             } else {
                 header('Location: login-registro.html');
             }

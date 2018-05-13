@@ -6,8 +6,25 @@ class Producto {
     
     private $nombre;
     private $cantidad;
-             
+    private $precio;
+           
     
+    /**
+     * @return mixed
+     */
+    public function getPrecio ()
+    {
+        return $this->precio;
+    }
+
+    /**
+     * @param mixed $precio
+     */
+    public function setPrecio ($precio)
+    {
+        $this->precio = $precio;
+    }
+
     /**
      * @return mixed
      */

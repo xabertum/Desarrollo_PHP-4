@@ -1,24 +1,9 @@
 <?php
 include 'Producto.php';
 
-/*Variable que nos pasa la cantidad de producto*/
+/* Variables que nos pasan los detalles de cada producto */
 $cantidades = $_POST['cantidad'];
-
-
-/* Array de productos */
-
-$productos = array(
-        "Producto1"=>"100",
-        "Producto2"=>"200",
-        "Producto3"=>"400",
-        "Producto4"=>"100",
-        "Producto5"=>"200",
-        "Producto6"=>"400",
-        "Producto7"=>"100",
-        "Producto8"=>"200",
-        "Producto9"=>"400",        
-)
-
+$productos = $_POST['producto'];
 
 ?>
 
@@ -35,7 +20,7 @@ $productos = array(
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
 	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
 	crossorigin="anonymous">
-	
+
 <link rel="stylesheet" href="css/compra.css">
 </head>
 
@@ -45,35 +30,42 @@ $productos = array(
 		<div class="container">
 			<h1 class="jumbotron-heading">Album example</h1>
 			<div class="text-center">
+				<table id="table" border="1">
+					<tr>
+						<th>Nombre Producto</th>
+						<th>Cantidad</th>
+						<th>Precio</th>
+					</tr>
 
             <?php
             if (isset($cantidades)) {
-                echo '<table id="table" border="1">';
-                echo '<tr>
-					<th>Nombre Producto</th>
-					<th>Cantidad</th>
-				</tr>';
+                
                 foreach ($cantidades as $cantidad) {
                     
-                    $producto = new Producto();
-                    $producto->setCantidad($cantidad);
+                    echo '<tr>';
+                    echo '<td>';
                     
-                    foreach ($productos as $producto => $precio_producto) {
+                    echo "";
                     
-                        $producto->setNombre($producto);
+                    echo '</td>';
+                    echo '<td>';
                     
-                    }
-                    echo '<tr>
-					<td>Row 1: Col 1</td>
-					<td>';
-                    echo $producto->getCantidad();
-                    '</td>
-				</tr>';
+                    echo $cantidad;
+                    
+                    echo '</td>';
+                    echo '<td>';
+                    
+                    echo "";
+                    
+                    echo '</td>';
+                    echo '</tr>';
                 }
             }
             
-            ?>                        
-            </div>
+            ?>
+				</table>
+
+			</div>
 		</div>
 	</section>
 

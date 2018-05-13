@@ -80,8 +80,7 @@ session_start();
 				sweet, but not too short so folks don't simply skip over it
 				entirely.</p>
 			<p>
-			
-			
+						
 			<form action="compra.php" id="carrito_form" method="post">
 				<input class="btn btn-primary" type="submit" value="Comprar">
 			</form>
@@ -108,6 +107,7 @@ session_start();
 								<div>
 									Cantidad:
 									<input type="number" name="cantidad[]" style="width: 25%" min="1" form="carrito_form">
+									<input type="hidden" name="producto[]" value="Producto_1" form="carrito_form">
 								</div>
 								<small class="text-muted">100 &euro;</small>
 							</div>
@@ -127,6 +127,7 @@ session_start();
 								<div>
 									Cantidad:
 									<input type="number" name="cantidad[]" style="width: 25%" min="1" form="carrito_form">
+									<input type="hidden" name="producto[]" value="Producto_2" form="carrito_form">
 								</div>
 								<small class="text-muted">100 &euro;</small>
 							</div>
@@ -146,6 +147,7 @@ session_start();
 								<div>
 									Cantidad:
 									<input type="number" name="cantidad[]" style="width: 25%" min="1" form="carrito_form">
+									<input type="hidden" name="producto[]" value="Producto_3" form="carrito_form">
 								</div>
 								<small class="text-muted">100 &euro;</small>
 							</div>

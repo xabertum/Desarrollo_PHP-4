@@ -1,11 +1,6 @@
 <?php
 include 'helps.php';
-
-/* Variables de servidor */
-$host = "localhost";
-$user = "root";
-$passwordDB = "";
-$dbname = "electro_tienda";
+include 'assets/connection.php';
 
 /* variables de usuario */
 
@@ -17,18 +12,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     if ($password == $password2) {
     
-    /* Conectando al servidor de MySQL */
-    $conn = new mysqli($host, $user, $passwordDB, $dbname);
-    
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
+   
     
     $sql = "INSERT INTO users (username, password) VALUES ('$username', '$password')";
     
     if ($conn->query($sql)) {
         
-        header('Location: index.html');
+        header('Location: index.php');
     } else {
         echo 'failed ' . mysqli_error($conn);
     }
