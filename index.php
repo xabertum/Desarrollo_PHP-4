@@ -1,13 +1,8 @@
 <?php
 include 'assets/connection.php';
 
-$cantidades = $_POST['cantidad'];
-$productos = $_POST['producto'];
-
-
-
-
-
+$sql = "UPDATE productos SET cantidad = '$_POST[cantidad]' WHERE id = $_POST[id]";
+$conn->query($sql);
 
 ?>
 
@@ -92,6 +87,7 @@ $productos = $_POST['producto'];
 			<form action="compra.php" id="carrito_form" method="post">
 				<input class="btn btn-primary" type="submit" value="Comprar">
 			</form>
+			
 			<form action="<?php echo htmlentities($_SERVER['PHP_SELF'])?>" id="cesta-compra" method="post"></form>
 			
 			
@@ -113,8 +109,8 @@ $productos = $_POST['producto'];
 							<div class="d-flex justify-content-between align-items-center">
 								<div>
 									Cantidad:
-									<input type="number" name="cantidad[]" style="width: 25%" min="1" form="cesta-compra">
-									<input type="hidden" name="producto[]" value="Producto_1" form="cesta-compra">
+									<input type="number" name="cantidad" style="width: 25%" min="1" form="cesta-compra">
+									<input type="hidden" name="id" value="1" form="cesta-compra">
 									<input class="btn btn-primary" type="submit" value="Agregar" form="cesta-compra">
 								</div>
 								<small class="text-muted">100 &euro;</small>

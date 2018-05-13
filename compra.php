@@ -38,35 +38,28 @@ $resultado = $conn->query($sql);
 					</tr>
 
             <?php
-            if (isset($cantidades)) {
-                    
+                                
                     if ($resultado->num_rows > 0) {
                         
                         while ($filas = $resultado->fetch_assoc()) {
-                            
-                            if ($filas['precio'] > 100) {
+                                                                                 
+                            if ($filas['cantidad'] >= 1 ) {
                                 
                                 echo '<tr>';
-                                echo '<td>';
-                                
-                                echo $filas['nombre'];
-                                
+                                echo '<td>';                                
+                                echo $filas['nombre'];                                
                                 echo '</td>';
-                                echo '<td>';
-                                
-                                echo $filas['cantidad'];
-                                
+                                echo '<td>';                                
+                                echo $filas['cantidad'];                                
                                 echo '</td>';
-                                echo '<td>';
-                                
-                                echo $filas['precio'];
-                                
+                                echo '<td>';                                
+                                echo $filas['precio'];                                
                                 echo '</td>';
                                 echo '</tr>';
                             }
                         }
                     }
-                }
+                
             
             ?>
 				</table>
