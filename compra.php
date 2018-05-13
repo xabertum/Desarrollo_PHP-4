@@ -45,7 +45,7 @@ $productos = $_POST['producto'];
                     echo '<tr>';
                     echo '<td>';
                     
-                    echo $productos[0];
+                    echo $productos;
                     
                     echo '</td>';
                     echo '<td>';
