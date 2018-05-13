@@ -1,5 +1,13 @@
 <?php
-session_start();
+include 'assets/connection.php';
+
+$cantidades = $_POST['cantidad'];
+$productos = $_POST['producto'];
+
+
+
+
+
 
 ?>
 
@@ -84,7 +92,7 @@ session_start();
 			<form action="compra.php" id="carrito_form" method="post">
 				<input class="btn btn-primary" type="submit" value="Comprar">
 			</form>
-			<form action="cesta.php" id="cesta-compra"></form>
+			<form action="<?php echo htmlentities($_SERVER['PHP_SELF'])?>" id="cesta-compra" method="post"></form>
 			
 			
 		</div>
@@ -107,7 +115,7 @@ session_start();
 									Cantidad:
 									<input type="number" name="cantidad[]" style="width: 25%" min="1" form="cesta-compra">
 									<input type="hidden" name="producto[]" value="Producto_1" form="cesta-compra">
-									<input class="btn btn-primary" type="submit" value="Agregar">
+									<input class="btn btn-primary" type="submit" value="Agregar" form="cesta-compra">
 								</div>
 								<small class="text-muted">100 &euro;</small>
 							</div>

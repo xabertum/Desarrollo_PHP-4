@@ -1,10 +1,6 @@
 <?php
-include 'Producto.php';
-include 'assets/connection.php';
 
-/* Variables que nos pasan los detalles de cada producto */
-$cantidades = $_POST['cantidad'];
-$productos = $_POST['producto'];
+include 'assets/connection.php';
 
 $sql = "SELECT * FROM productos";
 $resultado = $conn->query($sql);
