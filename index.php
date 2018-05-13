@@ -2,7 +2,7 @@
 include 'assets/connection.php';
 
 $sql = "UPDATE productos SET cantidad = '$_POST[cantidad]' WHERE id = $_POST[id]";
-$conn->query($sql);
+$conn->query($sql); 
 
 ?>
 
