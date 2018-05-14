@@ -148,8 +148,9 @@ for ($i = 0; $i <= count($productos) - 1; $i++) {
 							<div class="d-flex justify-content-between align-items-center">
 								<div>
 									Cantidad:
-									<input type="number" name="cantidad[]" style="width: 25%" min="1" form="carrito_form">
-									<input type="hidden" name="producto[]" value="Producto_3" form="carrito_form">
+									<input type="number" name="cantidad[]" style="width: 25%" min="1" form="cesta-compra">
+									<input type="hidden" name="id[]" value="3" form="cesta-compra">
+									<input class="btn btn-primary" type="submit" value="Agregar" form="cesta-compra">
 								</div>
 								<small class="text-muted">100 &euro;</small>
 							</div>
