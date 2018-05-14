@@ -1,11 +1,11 @@
 <?php
 include 'assets/connection.php';
 
+/* Variables que especifican cantidad y producto */
 $productos  = $_POST['id'];
 $cantidades = $_POST['cantidad'];
 
-var_dump($productos);
-
+/*SQL para setear cantidad de cada producto */
 for ($i = 0; $i <= count($productos) - 1; $i++) {
 
     $sql = "UPDATE productos SET cantidad = '$cantidades[$i]' WHERE id = '$productos[$i]'";
