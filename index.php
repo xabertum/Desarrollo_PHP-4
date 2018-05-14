@@ -112,11 +112,11 @@ if (isset($productos) && isset($cantidades)) {
 									<div class="d-flex justify-content-between align-items-center">
 										<div>
 											Cantidad:
-											<input type="number" name="cantidad[]" style="width: 25%" min="1" form="cesta-compra">
+											<input type="number" name="cantidad[]" style="width: 20%" min="1" form="cesta-compra">
 											<input type="hidden" name="id[]" value="1" form="cesta-compra">
-											<input class="btn btn-primary" type="submit" value="Agregar" form="cesta-compra">
+											<input class="btn btn-primary boton-agregar" type="submit" value="Agregar" form="cesta-compra">
 										</div>
-										<small class="text-muted">100 &euro;</small>
+										
 									</div>
 								</div>
 							</div>
@@ -130,11 +130,11 @@ if (isset($productos) && isset($cantidades)) {
 									<div class="d-flex justify-content-between align-items-center">
 										<div>
 											Cantidad:
-											<input type="number" name="cantidad[]" style="width: 25%" min="1" form="cesta-compra">
+											<input type="number" name="cantidad[]" style="width: 20%" min="1" form="cesta-compra">
 											<input type="hidden" name="id[]" value="2" form="cesta-compra">
-											<input class="btn btn-primary" type="submit" value="Agregar" form="cesta-compra">
+											<input class="btn btn-primary boton-agregar" type="submit" value="Agregar" form="cesta-compra">
 										</div>
-										<small class="text-muted">100 &euro;</small>
+										
 									</div>
 								</div>
 							</div>
@@ -149,11 +149,11 @@ if (isset($productos) && isset($cantidades)) {
 									<div class="d-flex justify-content-between align-items-center">
 										<div>
 											Cantidad:
-											<input type="number" name="cantidad[]" style="width: 25%" min="1" form="cesta-compra">
+											<input type="number" name="cantidad[]" style="width: 20%" min="1" form="cesta-compra">
 											<input type="hidden" name="id[]" value="3" form="cesta-compra">
-											<input class="btn btn-primary" type="submit" value="Agregar" form="cesta-compra">
+											<input class="btn btn-primary boton-agregar" type="submit" value="Agregar" form="cesta-compra">
 										</div>
-										<small class="text-muted">100 &euro;</small>
+										
 									</div>
 								</div>
 							</div>
