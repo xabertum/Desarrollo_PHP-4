@@ -68,7 +68,7 @@ if (isset($productos) && isset($cantidades)) {
 		</div>
 		<div class="navbar navbar-dark bg-dark box-shadow">
 			<div class="container d-flex justify-content-between">
-				<a href="#" class="navbar-brand d-flex align-items-center"> <strong>Album</strong>
+				<a href="#" class="navbar-brand d-flex align-items-center"> <strong>Electro-Tienda</strong>
 				</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse"
 					data-target="#navbarHeader" aria-controls="navbarHeader"
@@ -83,15 +83,15 @@ if (isset($productos) && isset($cantidades)) {
 
 	<section class="jumbotron text-center">
 		<div class="container">
-			<h1 class="jumbotron-heading">Album example</h1>
-			<p class="lead text-muted">Something short and leading about the
-				collection below�its contents, the creator, etc. Make it short and
-				sweet, but not too short so folks don't simply skip over it
-				entirely.</p>
+			<h1 class="jumbotron-heading">Electro-Tienda</h1>
+			<p class="lead text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+			Integer nulla nibh, pellentesque sit amet ipsum vel, scelerisque feugiat tellus. 
+			Nam nec vehicula nunc, at vestibulum est. 
+			urna mauris at risus. Morbi hendrerit,</p>
 
 
 			<form action="compra.php" id="carrito_form" method="post">
-				<input class="btn btn-primary" type="submit" value="Comprar">
+				<input class="btn btn-primary" type="submit" value="Carrito de la compra">
 			</form>
 
 			<form action="<?php echo htmlentities($_SERVER['PHP_SELF']) ?>"
@@ -107,9 +107,9 @@ if (isset($productos) && isset($cantidades)) {
 					<div class="card mb-4 box-shadow">
 						<img src="images/2.jpg" class="card-img-top" alt="Card image cap">
 						<div class="card-body">
-							<p class="card-text">This is a wider card with supporting text
-								below as a natural lead-in to additional content. This content
-								is a little bit longer.</p>
+							<p class="product-name text-center">Nikon Coolpix S23</p>
+							<p class="text-center">100&euro;</p>
+							<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nulla nibh.</p>
 							<div class="d-flex justify-content-between align-items-center">
 								<div>
 									Cantidad: <input type="number" name="cantidad[]"
@@ -127,16 +127,14 @@ if (isset($productos) && isset($cantidades)) {
 					<div class="card mb-4 box-shadow">
 						<img src="images/f2.jpg" class="card-img-top" alt="Card image cap">
 						<div class="card-body">
-							<p class="card-text">This is a wider card with supporting text
-								below as a natural lead-in to additional content. This content
-								is a little bit longer.</p>
+							<p class="product-name text-center">Fujifilm FinePix S2950</p>
+							<p class="text-center">200&euro;</p>
+							<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nulla nibh.</p>
 							<div class="d-flex justify-content-between align-items-center">
 								<div>
-									Cantidad: <input type="number" name="cantidad[]"
-										style="width: 20%" min="1" form="cesta-compra"> <input
-										type="hidden" name="id[]" value="2" form="cesta-compra"> <input
-										class="btn btn-primary boton-agregar" type="submit"
-										value="Agregar" form="cesta-compra">
+									Cantidad: <input type="number" name="cantidad[]" style="width: 20%" min="1" form="cesta-compra">
+									  <input type="hidden" name="id[]" value="2" form="cesta-compra">
+									  <input class="btn btn-primary boton-agregar" type="submit" value="Agregar" form="cesta-compra">
 								</div>
 
 							</div>
@@ -149,9 +147,9 @@ if (isset($productos) && isset($cantidades)) {
 							data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail"
 							alt="Card image cap">
 						<div class="card-body">
-							<p class="card-text">This is a wider card with supporting text
-								below as a natural lead-in to additional content. This content
-								is a little bit longer.</p>
+							<p class="product-name text-center">Canon PowerShot SX710 HS </p>
+							<p class="text-center">300&euro;</p>
+							<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nulla nibh.</p>
 							<div class="d-flex justify-content-between align-items-center">
 								<div>
 									Cantidad: <input type="number" name="cantidad[]"

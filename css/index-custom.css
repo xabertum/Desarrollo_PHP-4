@@ -48,5 +48,8 @@ footer p {
 .boton-agregar {
 	margin-left: 15%;
 }
-
+.product-name {
+	color: blue;
+	font-weight: 600;
+}
 
