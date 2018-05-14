@@ -54,13 +54,13 @@ $suma_total = 0;
                 echo $filas['cantidad'];
                 echo '</td>';
                 echo '<td>';
-                echo $filas['precio']. "&euro;";
+                echo $filas['precio'] . "&euro;";
                 echo '</td>';
                 echo '<td>';
-                echo $total = $filas['precio'] * $filas['cantidad']. "&euro;";
+                echo $total = $filas['precio'] * $filas['cantidad'] . "&euro;";
                 echo '</td>';
                 echo '</tr>';
-                                                
+                
                 $suma_total += $total;
             }
         }
@@ -85,6 +85,9 @@ $suma_total = 0;
     
     ?>
 					</table>
+					
+					 <input class="btn btn-primary boton-agregar" type="submit" value="Aceptar" form="cesta-compra">
+					 <input class="btn btn-primary boton-agregar" type="submit" value="Rechazar" form="cesta-compra">
 
 			</div>
 		</div>
