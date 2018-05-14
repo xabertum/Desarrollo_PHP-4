@@ -4,19 +4,19 @@ include 'assets/connection.php';
 /* Variables que especifican cantidad y producto */
 if ($_SERVER['REQUEST_METHOD'] == "post") {
 
-$productos  = $_POST['id'];
-$cantidades = $_POST['cantidad'];
+    $productos = $_POST['id'];
+    $cantidades = $_POST['cantidad'];
 }
 /*SQL para setear cantidad de cada producto */
 
 if (isset($productos) && isset($cantidades)) {
 
-for ($i = 0; $i <= count($productos) - 1; $i++) {
+    for ($i = 0; $i <= count($productos) - 1; $i++) {
 
-    $sql = "UPDATE productos SET cantidad = '$cantidades[$i]' WHERE id = '$productos[$i]'";
-    $conn->query($sql);
+        $sql = "UPDATE productos SET cantidad = '$cantidades[$i]' WHERE id = '$productos[$i]'";
+        $conn->query($sql);
 
-}
+    }
 }
 ?>
 
