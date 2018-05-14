@@ -152,8 +152,7 @@ if (isset($productos) && isset($cantidades)) {
 											<input type="number" name="cantidad[]" style="width: 20%" min="1" form="cesta-compra">
 											<input type="hidden" name="id[]" value="3" form="cesta-compra">
 											<input class="btn btn-primary boton-agregar" type="submit" value="Agregar" form="cesta-compra">
-										</div>
-										
+										</div>										
 									</div>
 								</div>
 							</div>
