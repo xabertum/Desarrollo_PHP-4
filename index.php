@@ -92,7 +92,6 @@ $conn->query($sql);
 			
 		</div>
 	</section>
-
 	<div class="album py-5 bg-light">
 		<div class="container">
 			<div class="row">
