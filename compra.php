@@ -2,7 +2,7 @@
 
 include 'assets/connection.php';
 
-$sql = "SELECT * FROM productos";
+$sql       = "SELECT * FROM productos";
 $resultado = $conn->query($sql);
 
 ?>
@@ -38,30 +38,29 @@ $resultado = $conn->query($sql);
 					</tr>
 
             <?php
-                                
-                    if ($resultado->num_rows > 0) {
-                        
-                        while ($filas = $resultado->fetch_assoc()) {
-                                                                                 
-                            if ($filas['cantidad'] >= 1 ) {
-                                
-                                echo '<tr>';
-                                echo '<td>';                                
-                                echo $filas['nombre'];                                
-                                echo '</td>';
-                                echo '<td>';                                
-                                echo $filas['cantidad'];                                
-                                echo '</td>';
-                                echo '<td>';                                
-                                echo $filas['precio'];                                
-                                echo '</td>';
-                                echo '</tr>';
-                            }
-                        }
-                    }
-                
-            
-            ?>
+
+if ($resultado->num_rows > 0) {
+
+    while ($filas = $resultado->fetch_assoc()) {
+
+        if ($filas['cantidad'] >= 1) {
+
+            echo '<tr>';
+            echo '<td>';
+            echo $filas['nombre'];
+            echo '</td>';
+            echo '<td>';
+            echo $filas['cantidad'];
+            echo '</td>';
+            echo '<td>';
+            echo $filas['precio'];
+            echo '</td>';
+            echo '</tr>';
+        }
+    }
+}
+
+?>
 				</table>
 
 			</div>

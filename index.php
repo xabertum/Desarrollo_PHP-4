@@ -1,8 +1,17 @@
 <?php
 include 'assets/connection.php';
 
-$sql = "UPDATE productos SET cantidad = '$_POST[cantidad]' WHERE id = $_POST[id]";
-$conn->query($sql); 
+$productos  = $_POST['id'];
+$cantidades = $_POST['cantidad'];
+
+var_dump($productos);
+
+for ($i = 0; $i <= count($productos) - 1; $i++) {
+
+    $sql = "UPDATE productos SET cantidad = '$cantidades[$i]' WHERE id = '$productos[$i]'";
+    $conn->query($sql);
+
+}
 
 ?>
 
@@ -54,14 +63,8 @@ $conn->query($sql);
 		</div>
 		<div class="navbar navbar-dark bg-dark box-shadow">
 			<div class="container d-flex justify-content-between">
-				<a href="#" class="navbar-brand d-flex align-items-center"> <svg
-						xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-						viewBox="0 0 24 24" fill="none" stroke="currentColor"
-						stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-						class="mr-2">
-						<path
-							d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
-						<circle cx="12" cy="13" r="4"></circle></svg> <strong>Album</strong>
+				<a href="#" class="navbar-brand d-flex align-items-center">
+					<strong>Album</strong>
 				</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse"
 					data-target="#navbarHeader" aria-controls="navbarHeader"
@@ -81,15 +84,15 @@ $conn->query($sql);
 				collection below�its contents, the creator, etc. Make it short and
 				sweet, but not too short so folks don't simply skip over it
 				entirely.</p>
-			
-						
+
+
 			<form action="compra.php" id="carrito_form" method="post">
 				<input class="btn btn-primary" type="submit" value="Comprar">
 			</form>
-			
-			<form action="<?php echo htmlentities($_SERVER['PHP_SELF'])?>" id="cesta-compra" method="post"></form>
-			
-			
+
+			<form action="<?php echo htmlentities($_SERVER['PHP_SELF']) ?>" id="cesta-compra" method="post"></form>
+
+
 		</div>
 	</section>
 	<div class="album py-5 bg-light">
@@ -97,9 +100,7 @@ $conn->query($sql);
 			<div class="row">
 				<div class="col-md-4">
 					<div class="card mb-4 box-shadow">
-						<img src="images/2.jpg" class="card-img-top"
-							data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail"
-							alt="Card image cap">
+						<img src="images/2.jpg" class="card-img-top" alt="Card image cap">
 						<div class="card-body">
 							<p class="card-text">This is a wider card with supporting text
 								below as a natural lead-in to additional content. This content
@@ -107,8 +108,8 @@ $conn->query($sql);
 							<div class="d-flex justify-content-between align-items-center">
 								<div>
 									Cantidad:
-									<input type="number" name="cantidad" style="width: 25%" min="1" form="cesta-compra">
-									<input type="hidden" name="id" value="1" form="cesta-compra">
+									<input type="number" name="cantidad[]" style="width: 25%" min="1" form="cesta-compra">
+									<input type="hidden" name="id[]" value="1" form="cesta-compra">
 									<input class="btn btn-primary" type="submit" value="Agregar" form="cesta-compra">
 								</div>
 								<small class="text-muted">100 &euro;</small>
@@ -118,9 +119,7 @@ $conn->query($sql);
 				</div>
 				<div class="col-md-4">
 					<div class="card mb-4 box-shadow">
-						<img src="images/f2.jpg" class="card-img-top"
-							data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail"
-							alt="Card image cap">
+						<img src="images/f2.jpg" class="card-img-top" alt="Card image cap">
 						<div class="card-body">
 							<p class="card-text">This is a wider card with supporting text
 								below as a natural lead-in to additional content. This content
@@ -128,8 +127,9 @@ $conn->query($sql);
 							<div class="d-flex justify-content-between align-items-center">
 								<div>
 									Cantidad:
-									<input type="number" name="cantidad[]" style="width: 25%" min="1" form="carrito_form">
-									<input type="hidden" name="producto[]" value="Producto_2" form="carrito_form">
+									<input type="number" name="cantidad[]" style="width: 25%" min="1" form="cesta-compra">
+									<input type="hidden" name="id[]" value="2" form="cesta-compra">
+									<input class="btn btn-primary" type="submit" value="Agregar" form="cesta-compra">
 								</div>
 								<small class="text-muted">100 &euro;</small>
 							</div>
