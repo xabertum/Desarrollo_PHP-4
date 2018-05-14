@@ -37,57 +37,51 @@ $suma_total = 0;
 						<th>Precio unidad</th>
 						<th>Total</th>
 					</tr>
-
-						<?php
-    
-    if ($resultado->num_rows > 0) {
-        
-        while ($filas = $resultado->fetch_assoc()) {
-            
-            if ($filas['cantidad'] >= 1) {
-                
-                echo '<tr>';
-                echo '<td>';
-                echo $filas['nombre'];
-                echo '</td>';
-                echo '<td>';
-                echo $filas['cantidad'];
-                echo '</td>';
-                echo '<td>';
-                echo $filas['precio'] . "&euro;";
-                echo '</td>';
-                echo '<td>';
-                echo $total = $filas['precio'] * $filas['cantidad'] . "&euro;";
-                echo '</td>';
-                echo '</tr>';
-                
-                $suma_total += $total;
-            }
-        }
-    }
-    
-    echo '<tr>';
-    echo '<td>';
-    echo "";
-    echo '</td>';
-    echo '<td>';
-    echo "";
-    echo '</td>';
-    echo '<td>';
-    echo "";
-    echo '</td>';
-    echo '<td style="color: red;">';
-    
-    echo $suma_total . "&euro;";
-    
-    echo '</td>';
-    echo '</tr>';
-    
-    ?>
+                    	<?php                        
+                        if ($resultado->num_rows > 0) {
+                            
+                            while ($filas = $resultado->fetch_assoc()) {
+                                
+                                if ($filas['cantidad'] >= 1) {
+                                    
+                                    echo '<tr>';
+                                    echo '<td>';
+                                    echo $filas['nombre'];
+                                    echo '</td>';
+                                    echo '<td>';
+                                    echo $filas['cantidad'];
+                                    echo '</td>';
+                                    echo '<td>';
+                                    echo $filas['precio'] . "&euro;";
+                                    echo '</td>';
+                                    echo '<td>';
+                                    echo $total = $filas['precio'] * $filas['cantidad'] . "&euro;";
+                                    echo '</td>';
+                                    echo '</tr>';
+                                    
+                                    $suma_total += $total;
+                                }
+                            }
+                        }                        
+                        echo '<tr>';
+                        echo '<td>';
+                        echo "";
+                        echo '</td>';
+                        echo '<td>';
+                        echo "";
+                        echo '</td>';
+                        echo '<td>';
+                        echo "";
+                        echo '</td>';
+                        echo '<td style="color: red;">';    
+                        echo $suma_total . "&euro;";    
+                        echo '</td>';
+                        echo '</tr>';                        
+                        ?>
 					</table>
 					
-					 <input class="btn btn-primary boton-agregar" type="submit" value="Aceptar" form="cesta-compra">
-					 <input class="btn btn-primary boton-agregar" type="submit" value="Rechazar" form="cesta-compra">
+					 <a href="formulario-compra.php" class="btn btn-primary my-2">Aceptar</a>
+            		 <a href="index.php" class="btn btn-secondary my-2">Rechazar</a>
 
 			</div>
 		</div>
