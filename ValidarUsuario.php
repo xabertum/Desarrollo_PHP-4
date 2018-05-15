@@ -2,7 +2,6 @@
 include_once 'helps.php';
 include_once 'assets/connection.php';
 
-
 $sql = "SELECT * FROM users";
 $resultado = $conn->query($sql);
 
