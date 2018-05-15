@@ -1,5 +1,7 @@
 <?php
 include_once 'assets/connection.php';
+require __DIR__.'/vendor/autoload.php';
+use Spipu\Html2Pdf\Html2Pdf;
 
 if (isset($_POST['datos_comprador'])) {
     
@@ -10,6 +12,19 @@ if (isset($_POST['datos_comprador'])) {
             VALUES ('$toString')";
     
     $conn->query($sql);
+}
+
+
+if (isset($_POST['generar-pdf'])) {
+
+	ob_start();
+	require_once '/assets/factura.php';
+	$html = ob_get_clean();
+	
+	$html2pdf = new Html2Pdf('P', 'A4', 'es','true','UTF-8');
+	$html2pdf->writeHTML($html);
+	$html2pdf->output();
+
 }
 
 ?>
@@ -42,7 +57,7 @@ if (isset($_POST['datos_comprador'])) {
 			<input autofocus class="form-control" name="datos_comprador[]" placeholder="Correo electronico" required type="email">
 			<input autofocus class="form-control" name="datos_comprador[]" placeholder="Profesion" type="text">
 			<br>
-		<button class="btn btn-lg btn-primary" type="submit">Aceptar</button>
+		<button class="btn btn-lg btn-primary" name="generar-pdf" type="submit">Aceptar</button>
 	</form>
 
 </body>
