@@ -30,6 +30,12 @@ img {
 	float: right;
 		
 }
+
+#blue {
+	color: blue;
+	text-align: center;
+}
+
 </style>
 </head>
 
@@ -47,46 +53,46 @@ img {
 						<th>Total</th>
 					</tr>
 					<?php
-if ($resultado->num_rows > 0) {
+					if ($resultado->num_rows > 0) {
 
-    while ($filas = $resultado->fetch_assoc()) {
+						while ($filas = $resultado->fetch_assoc()) {
 
-        if ($filas['cantidad'] >= 1) {
+							if ($filas['cantidad'] >= 1) {
 
-            echo '<tr>';
-            echo '<td>';
-            echo $filas['nombre'];
-            echo '</td>';
-            echo '<td>';
-            echo $filas['cantidad'];
-            echo '</td>';
-            echo '<td>';
-            echo $filas['precio'] . "&euro;";
-            echo '</td>';
-            echo '<td>';
-            echo $total = $filas['precio'] * $filas['cantidad'] . "&euro;";
-            echo '</td>';
-            echo '</tr>';
+								echo '<tr>';
+								echo '<td>';
+								echo $filas['nombre'];
+								echo '</td>';
+								echo '<td>';
+								echo $filas['cantidad'];
+								echo '</td>';
+								echo '<td>';
+								echo $filas['precio'] . "&euro;";
+								echo '</td>';
+								echo '<td>';
+								echo $total = $filas['precio'] * $filas['cantidad'] . "&euro;";
+								echo '</td>';
+								echo '</tr>';
 
-            $suma_total += $total;
-        }
-    }
-}
-echo '<tr>';
-echo '<td>';
-echo "";
-echo '</td>';
-echo '<td>';
-echo "";
-echo '</td>';
-echo '<td>';
-echo "";
-echo '</td>';
-echo '<td style="color: red;">';
-echo $suma_total . "&euro;";
-echo '</td>';
-echo '</tr>';
-?>
+								$suma_total += $total;
+							}
+						}
+					}
+					echo '<tr>';
+					echo '<td>';
+					echo "";
+					echo '</td>';
+					echo '<td>';
+					echo "";
+					echo '</td>';
+					echo '<td>';
+					echo "";
+					echo '</td>';
+					echo '<td style="color: red;">';
+					echo $suma_total . "&euro;";
+					echo '</td>';
+					echo '</tr>';
+					?>
 					</table>
 			</div>
 
@@ -150,14 +156,9 @@ echo '</tr>';
 						Email: ventas@electro-store.net 
 					</li>
 				</ul>
-				
-
-
-
-
 			</div>
 
-
+			<h1 id="blue">!GRACIAS POR SU COMPRA!</h1>
 	</div>
 </body>
 
